@@ -1,0 +1,49 @@
+{
+  "name": "lkm-starter",
+  "version": "1.0.0",
+  "description": "Lasso.js + Koa + Marko template engine starter kit.",
+  "main": "server.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "dev": "browser-refresh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonli/lkm-starter"
+  },
+  "keywords": [
+    "Lasso.js",
+    "Koa",
+    "Marko",
+    "Template engine",
+    "starter kit"
+  ],
+  "author": "Leon Li <lilei.leon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonli/lkm-starter/issues"
+  },
+  "homepage": "https://github.com/leonli/lkm-starter",
+  "dependencies": {
+    "browser-refresh-taglib": "^1.0.3",
+    "jquery": "^2.1.4",
+    "koa": "^1.1.1",
+    "koa-router": "^5.2.3",
+    "koa-static": "^1.5.1",
+    "lasso": "^1.12.0",
+    "lasso-less": "^2.1.2",
+    "marko": "^2.7.28"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.3",
+    "browser-refresh": "^1.4.10",
+    "browser-refresh-client": "^1.1.4",
+    "eslint": "^1.8.0",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1",
+    "mocha": "^2.3.3"
+  }
+}
