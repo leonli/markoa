@@ -1,18 +1,7 @@
-'use strict';
+require('babel-core/register');
+require('babel-polyfill');
 
-const prodMode = process.env.NODE_ENV === 'production';
+// Setup the node evnironment to global application context
+global.__DEV_MODE__ = process.env.NODE_ENV !== 'production';
 
-const koa = require('koa');
-const app = koa();
-const router = require('koa-router')();
-const marko = require('marko');
-const serve = require('koa-static');
-
-app.use(router.routes());
-app.use(serve('./static'));
-
-router.get('/hello', function *(next) {
-  this.body = 'Hello World';
-});
-
-app.listen(3000);
+require('./src/main');
