@@ -13,3 +13,6 @@ rules:
   arrow-spacing: 2
   dot-location: [2, "property"]
   prefer-arrow-callback: 2
+globals:
+  __PORT__: true
+  __DEV_MODE__: true

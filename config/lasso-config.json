@@ -1,0 +1,19 @@
+{
+    "plugins": [
+        "lasso-less"
+    ],
+    "outputDir": "static/client",
+    "fingerprintsEnabled": true,
+    "urlPrefix": "/client",
+    "minify": true,
+    "resolveCssUrls": true,
+    "bundlingEnabled": true,
+    "bundles": [
+        {
+            "name": "jquery",
+            "dependencies": [
+                "require: jquery"
+            ]
+        }
+    ]
+}

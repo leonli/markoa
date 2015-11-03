@@ -1,20 +1,28 @@
-'use strict';
-
 import koa from 'koa';
-import koaRouter from 'koa-router';
-import marko from 'marko';
 import serve from 'koa-static';
+// Import defined routes
+import {router} from './routes';
+import lasso from 'lasso';
+import {devConfig, prodConfig} from '../config';
 
-// init the Koa application
+// Config Lasso for building up the static resources
+if (__DEV_MODE__) {
+  lasso.configure(devConfig);
+} else {
+  lasso.configure(prodConfig);
+}
+
+// Init the Koa application
 const app = koa();
-// init the Koa router
-const router = koaRouter();
-
+// Init routes
 app.use(router.routes());
+// Apply serving static resources
 app.use(serve('./static'));
 
-router.get('/hello', function *(next) {
-  this.body = 'Hello World';
-});
+app.listen(__PORT__ || 3000);
 
-app.listen(3000);
+if (__DEV_MODE__) {
+  if (process.send) {
+    process.send('online');
+  }
+}
