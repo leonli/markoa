@@ -8,6 +8,7 @@ import {devConfig, prodConfig} from '../config';
 // Config Lasso for building up the static resources
 if (__DEV_MODE__) {
   lasso.configure(devConfig);
+  require('../config/browser-refresh-config').enable();
 } else {
   lasso.configure(prodConfig);
 }
