@@ -36,7 +36,7 @@
     "koa": "^1.1.1",
     "koa-router": "^5.2.3",
     "koa-static": "^1.5.1",
-    "lasso": "^1.12.0",
+    "lasso": "https://github.com/leonli/lasso.git",
     "lasso-less": "^2.1.2",
     "marko": "^2.7.28"
   },
