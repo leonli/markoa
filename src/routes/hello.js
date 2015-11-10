@@ -2,7 +2,12 @@ import marko from 'marko';
 const helloTemplate = marko.load(require.resolve('../views/hello/index.marko'));
 
 export function * hello(next) {
-  this.body = helloTemplate.stream({});
+
+  const getName = new Promise(resolve => {
+    setTimeout(() => resolve('Leon'), 3000);
+  });
+
+  this.body = helloTemplate.stream({getName});
   this.type = 'text/html';
   yield next;
 }

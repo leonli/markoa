@@ -9,12 +9,23 @@
 <body>
     <h1 id="header" class="hello">This is a playground sample</h1>
     <h3>Below is an image from Css background</h3>
-    <div class="signImg"></div>
+    <div class="signImg">
+      <async-fragment data-provider="data.getName" client-reorder="true" var="myName">
+          <async-fragment-placeholder>
+            <span class="whatName">Loading</span>
+          </async-fragment-placeholder>
+          <span class="whatName">My name is ${myName}</span>
+      </async-fragment>
+    </div>
 
     <h3>Below is an image from the image taglib</h3>
     <lasso-img src="../images/sign.jpg"/>
 
     <lasso-body/>
+
     <browser-refresh enabled="true" />
+
+    <async-fragments/>
+
 </body>
 </html>
