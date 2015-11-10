@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "dev": "browser-refresh"
+    "dev": "browser-refresh",
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",

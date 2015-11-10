@@ -1,3 +1,3 @@
-function hello() {
-  return 1 + 3;
-}
+var sum = require('./damon');
+
+console.log(sum(1, 3));
