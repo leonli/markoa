@@ -39,7 +39,7 @@
     "koa-compress": "^1.0.8",
     "koa-router": "^5.2.3",
     "koa-static": "^1.5.1",
-    "lasso": "leonli/lasso#be7cedd500c7d350524ac3e9c6d77b2609e6f120",
+    "lasso": "^1.12.1",
     "lasso-less": "^2.1.2",
     "marko": "^2.7.28"
   },
