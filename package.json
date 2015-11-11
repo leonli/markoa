@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/leonli/lkm-starter",
   "dependencies": {
-    "babel-core": "^6.1.4",
+    "babel-core": "^6.0.20",
     "babel-polyfill": "^6.0.16",
     "babel-preset-es2015": "^6.1.2",
     "browser-refresh-taglib": "^1.0.3",
