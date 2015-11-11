@@ -1,6 +1,7 @@
 import koa from 'koa';
 import serve from 'koa-static';
 import compress from 'koa-compress';
+import koaBunyanLogger from 'koa-bunyan-logger';
 // Import defined routes
 import {router} from './routes';
 import lasso from 'lasso';
@@ -16,6 +17,13 @@ if (__DEV_MODE__) {
 
 // Init the Koa application
 const app = koa();
+// Init the koa logger
+app.use(koaBunyanLogger({
+  name: 'markoa',
+  level: __DEV_MODE__ ? 'debug' : 'info'
+}));
+app.use(koaBunyanLogger.requestLogger());
+
 // Init the compress midleware
 app.use(compress({
   filter: content_type => {

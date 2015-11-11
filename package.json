@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
-    "dev": "browser-refresh",
-    "start": "NODE_ENV=production node server.js"
+    "dev": "browser-refresh | bunyan -o short",
+    "start": "NODE_ENV=production node server.js | bunyan -o short"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "koa-compress": "^1.0.8",
     "koa-router": "^5.2.3",
     "koa-static": "^1.5.1",
+    "koa-bunyan-logger": "^1.3.0",
     "lasso": "^1.12.1",
     "lasso-less": "^2.1.2",
     "marko": "^2.7.28"
