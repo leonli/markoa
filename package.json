@@ -8,7 +8,7 @@
     "npm": ">=3.0.0"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register",
+    "test": "mocha -c --compilers js:babel-core/register | bunyan -o short -l warn",
     "dev": "browser-refresh | bunyan -o short",
     "start": "NODE_ENV=production node server.js | bunyan -o short"
   },
