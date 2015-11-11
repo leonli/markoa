@@ -1,4 +1,4 @@
-# Markoa
+# Markoa [![Build Status](https://travis-ci.org/leonli/markoa.svg?branch=master)](https://travis-ci.org/leonli/markoa)
 Marko template engine + Koa + Lasso.js starter kit.
 
 ## Smile
