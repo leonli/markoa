@@ -20,7 +20,7 @@ Production mode => `NODE_ENV=production node server.js`
 │   └── views
 │       ├── client
 │       │   └── utils
-│       ├── <Your Module>
+│       ├── <your module>
 │       ├── images
 │       └── styles
 ├── static
