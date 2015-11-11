@@ -5,6 +5,8 @@ Marko template engine + Koa + Lasso.js starter kit.
 
 To enjoy this project, simply run `npm install && npm run dev`.
 
+There's only one router is available: `http://locahost:3000/welcome`. Try it and have fun. 🍻
+
 Production mode => `NODE_ENV=production node server.js`
 
 ### Project Structure

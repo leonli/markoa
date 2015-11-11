@@ -1,7 +1,0 @@
-{
-    "dependencies": [
-        "../styles/hello.less",
-        "require-run: ../client/hello.js",
-        "require-run: ../client/something.es6"
-    ]
-}

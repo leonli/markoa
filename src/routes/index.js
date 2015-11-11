@@ -3,7 +3,7 @@ import koaRouter from 'koa-router';
 export const router = koaRouter();
 
 // Import the generator functions from each route
-import {hello} from './hello';
+import {welcome} from './welcome';
 
 // Define rules for each route
-router.get('/hello', hello);
+router.get('/welcome', welcome);
