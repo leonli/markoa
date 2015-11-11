@@ -2,7 +2,8 @@
 parser: babel-eslint
 
 extends: standard
-
+env:
+  mocha: true
 rules:
   eqeqeq: 0
   no-var: 0

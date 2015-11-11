@@ -6,7 +6,7 @@ const getName = () => new Promise(resolve => {
 });
 
 const yourName = () => new Promise(resolve => {
-  setTimeout(() => resolve('Leon'), 1000);
+  setTimeout(() => resolve('Someone else'), 1000);
 });
 
 export function * welcome(next) {

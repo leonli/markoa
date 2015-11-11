@@ -28,8 +28,8 @@ app.use(compress({
 app.use(router.routes());
 // Apply serving static resources
 app.use(serve('./static'));
-
-app.listen(__PORT__ || 3000);
+// we will export the koa app for test cases
+export default app.listen(__PORT__ || 3000);
 
 if (__DEV_MODE__) {
   if (process.send) {
