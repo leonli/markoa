@@ -10,6 +10,7 @@ const yourName = () => new Promise(resolve => {
 });
 
 export function * welcome(next) {
+  this.log.debug('this is some log...');
   this.body = welcomeTemplate.stream({getName, yourName});
   this.type = 'text/html';
   yield next;

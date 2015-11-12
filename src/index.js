@@ -22,7 +22,11 @@ app.use(koaBunyanLogger({
   name: 'markoa',
   level: __DEV_MODE__ ? 'debug' : 'info'
 }));
-app.use(koaBunyanLogger.requestLogger());
+if (__DEV_MODE__) {
+  app.use(require('koa-logger')());
+} else {
+  app.use(koaBunyanLogger.requestLogger());
+}
 
 // Init the compress midleware
 app.use(compress({
