@@ -1,6 +1,7 @@
 import koa from 'koa';
 import serve from 'koa-static';
 import compress from 'koa-compress';
+import session from 'koa-generic-session';
 import koaBunyanLogger from 'koa-bunyan-logger';
 // Import defined routes
 import {router} from './routes';
@@ -27,6 +28,12 @@ if (__DEV_MODE__) {
 } else {
   app.use(koaBunyanLogger.requestLogger());
 }
+// Init the session midleware, we will use memory store in development mode
+app.keys = ['markoa-4mjsd67D9s'];
+app.use(session({
+  key: 'markoa.sid',
+  prefix: 'markoa:sess:'
+}));
 
 // Init the compress midleware
 app.use(compress({

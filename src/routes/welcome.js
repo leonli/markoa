@@ -10,8 +10,10 @@ const yourName = () => new Promise(resolve => {
 });
 
 export function * welcome(next) {
-  this.log.debug('this is some log...');
-  this.body = welcomeTemplate.stream({getName, yourName});
+  let count = this.session.count || 0;
+  this.log.debug('Current user session count would be %s', count);
+  this.body = welcomeTemplate.stream({getName, yourName, count});
+  count = this.session.count = ++count;
   this.type = 'text/html';
   yield next;
 }
