@@ -1,4 +1,4 @@
-# Markoa [![Build Status](https://travis-ci.org/leonli/markoa.svg?branch=master)](https://travis-ci.org/leonli/markoa) [![Coverage Status](https://coveralls.io/repos/leonli/markoa/badge.svg?branch=master&service=github)](https://coveralls.io/github/leonli/markoa?branch=master)
+# Markoa [![Build Status](https://travis-ci.org/leonli/markoa.svg?branch=master)](https://travis-ci.org/leonli/markoa)
 
 Marko template engine + Koa + Lasso.js starter kit.
 
