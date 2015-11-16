@@ -34,6 +34,7 @@ app.use(session({
   key: 'markoa.sid',
   prefix: 'markoa:sess:'
 }));
+// TODO prodction session store
 
 // Init the compress midleware
 app.use(compress({
